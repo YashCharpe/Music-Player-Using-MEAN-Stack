@@ -123,10 +123,6 @@
   },
   "defaultProject": "Music-Player-Using-Angular",
   "cli": {
-<<<<<<< HEAD
     "analytics": "1029ffa8-d0be-4803-96c3-35036ec886de"
-=======
-    "analytics": "83e00ef1-0adf-4525-acc4-b7c1a31b9f6f"
->>>>>>> 4bb7875c6be7963d0833f00ab5707da1049c39e9
   }
 }
