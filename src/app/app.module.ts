@@ -6,23 +6,31 @@ import { AppComponent } from './app.component';
 import { IndexPageComponent } from './MyComponents/index-page/index-page.component';
 import { RouterModule, Routes } from '@angular/router';
 
-import {LoginPageComponent} from './MyComponents/login-page/login-page.component'
+import {LoginPageComponent} from './MyComponents/login-page/login-page.component';
+import { RegistrationPageComponent } from './MyComponents/registration-page/registration-page.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {HttpClient,HttpClientModule} from '@angular/common/http'
 
 const appRoutes:Routes = [
   {path:'',component:IndexPageComponent},
-  {path:'login',component:LoginPageComponent}
+  {path:'login',component:LoginPageComponent},
+  {path:'register',component:RegistrationPageComponent}
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexPageComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    RegistrationPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    FormsModule,
+    RouterModule.forRoot(appRoutes),
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

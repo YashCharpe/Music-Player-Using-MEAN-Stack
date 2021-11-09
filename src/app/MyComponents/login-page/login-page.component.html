@@ -1,3 +1,4 @@
+<!--Navigation Bar-->
 <nav class="navbar navbar-light ">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -10,7 +11,7 @@
 
         <div>
             <a style="margin-right: 50px; color: aliceblue;">Discover</a>
-            <a style="margin-right: 100px; color: aliceblue; text-decoration: none;" routerLink="/login">LogIn</a>
+            <a style="margin-right: 100px; color: aliceblue; text-decoration: none;" routerLink="/register">Sign Up</a>
         </div>
     </div>
 </nav>
@@ -22,30 +23,30 @@
     </span>
 </div>
 
-
+<!--Registration Form-->
 <div class="registration-form" style="float: right; margin-right: 100px; width: 500px;height: 400px;">
-    <form style="background-color: #1f2127;">
+    <form #userInfo="ngForm" (ngSubmit)="loginFunction(userInfo.value)" style="background-color: #1f2127;">
+
         <div class="form-icon">
             <span><i class="icon icon-user"></i></span>
         </div>
+        
         <div class="form-group">
-            <input type="text" class="form-control item" id="username" placeholder="Username">
+            <input type="email" class="form-control item" id="emailId" name="emailId" [(ngModel)]="emailId"  placeholder="Email ID">
         </div>
+        
         <div class="form-group">
-            <input type="password" class="form-control item" id="password" placeholder="Password">
+            <input type="password" class="form-control item" id="password" name="password" [(ngModel)]="password"  placeholder="Password">
         </div>
-        <div class="form-group">
-            <input type="text" class="form-control item" id="email" placeholder="Email">
+        
+        <div class="form-group" style="float: left;margin-left: 50px;">
+            <button type="submit" class="btn btn-block create-account">Sign In</button>
         </div>
-        <div class="form-group">
-            <input type="text" class="form-control item" id="phone-number" placeholder="Phone Number">
-        </div>
-
-        <div class="form-group">
-            <button type="button" class="btn btn-block create-account">Create Account</button>
+        
+        <div class="form-group" style="float: right;margin-right: 50px;">
+            <button type="button" class="btn btn-block create-account" routerLink="/register" >Sign Up</button>
         </div>
     </form>
     <div class="social-media">
-
     </div>
 </div>
