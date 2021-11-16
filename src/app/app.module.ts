@@ -10,13 +10,16 @@ import {LoginPageComponent} from './MyComponents/login-page/login-page.component
 import { RegistrationPageComponent } from './MyComponents/registration-page/registration-page.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClient,HttpClientModule} from '@angular/common/http';
-import { MainDashboardPageComponent } from './MyComponents/main-dashboard-page/main-dashboard-page.component'
+import { MainDashboardPageComponent } from './MyComponents/main-dashboard-page/main-dashboard-page.component';
+import { NavbarDashboardComponent } from './MyComponents/navbar-dashboard/navbar-dashboard.component';
+import { MusicPlayerDashboardComponent } from './MyComponents/music-player-dashboard/music-player-dashboard.component'
 
 const appRoutes:Routes = [
   {path:'',component:IndexPageComponent},
   {path:'login',component:LoginPageComponent},
   {path:'register',component:RegistrationPageComponent},
-  {path:'dashboard',component:MainDashboardPageComponent}
+  {path:'dashboard',component:MainDashboardPageComponent},
+  {path:'player',component:MusicPlayerDashboardComponent}
 ]
 
 @NgModule({
@@ -25,7 +28,9 @@ const appRoutes:Routes = [
     IndexPageComponent,
     LoginPageComponent,
     RegistrationPageComponent,
-    MainDashboardPageComponent
+    MainDashboardPageComponent,
+    NavbarDashboardComponent,
+    MusicPlayerDashboardComponent
   ],
   imports: [
     BrowserModule,

@@ -36,5 +36,4 @@ export class RegistrationPageComponent implements OnInit {
       alert(this.name+"Account Created Successfully!")
     }
   }
-
 }
