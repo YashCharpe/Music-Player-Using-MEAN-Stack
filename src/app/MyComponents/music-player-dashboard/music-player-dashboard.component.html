@@ -6,18 +6,18 @@
     <div class="music-card__wrapper">
         <div class="music-card">
             <div class="music-card__content">
-                <img class="music-image" src="../../../assets/Music/New-Release-Thumbnails/ranjha.png" alt="">
+                <img class="music-image" [src]="thumbnailPath" alt="">
                 <div class="music-info">
-                    <h2 class="music-name">Ranjha (Shershaah)</h2>
-                    <p class="music-artist">Jasleen Royal, B Praak</p>
+                    <h2 class="music-name">{{musicName}}</h2>
+                    <p class="music-artist">{{artistName}}</p>
                 </div>
-                <audio
-                    src="https://yildirimzlm.s3.us-east-2.amazonaws.com/Post+Malone+-+rockstar+ft.+21+Savage+(Official+Audio).mp3"></audio>
+
                 <div class="music-progress">
                     <div id="progress-bar" class="music-progress-bar"></div>
                     <div class="music-progress__time">
-                        <span class="music-progress__time-item music-current-time">00:00</span>
-                        <span class="music-progress__time-item music-duration-time">00:00</span>
+                        <span class="music-progress__time-item music-current-time">{{currenttime}}</span>
+                        <span
+                            class="music-progress__time-item music-duration-time">{{songDuration}}:{{secDuration}}</span>
                     </div>
                 </div>
                 <div class="music-controls">
@@ -28,7 +28,7 @@
 
                     <div id="play" class="music-controls-item">
                         <!--<i class="fas fa-play music-controls-item--icon play-icon"></i>-->
-                        <img src="../../../assets/play.png" (click)="playAudio()" alt="" style="height: 40px;">
+                        <img [src]="playBtnPath" (click)="playAudio()" alt="" style="height: 40px;">
                     </div>
 
                     <div id="next" class="music-controls-item">

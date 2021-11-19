@@ -1,4 +1,7 @@
+import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { BackendApiService } from '../../services/backend-api.service'
 
 @Component({
   selector: 'app-main-dashboard-page',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainDashboardPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+
+  getSong(name:any){
+    console.log(name)
+
+    this.router.navigate(["/player/"+name])
+
   }
 
 }

@@ -18,4 +18,9 @@ export class BackendApiService {
     return this.http.get(url)
   }
 
+  getSelectedSong(songId:string){
+    let url = "http://localhost:9000/musics/"+songId;
+    return this.http.get(url)
+  }
+
 }

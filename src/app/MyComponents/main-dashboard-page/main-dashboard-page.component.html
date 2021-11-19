@@ -1,7 +1,6 @@
 
 
 <body style="background-color:#0e0d0d;">
-  <app-navbar-dashboard></app-navbar-dashboard>
     <section class="menu">
       <!-- title -->
       <div class="title">
@@ -13,13 +12,13 @@
         <h3 style="margin: 1.25rem 15rem; color: aliceblue; text-align: center;">Trending</h3>
         <div class="carousel-inner" style="border-radius: 2rem;">
           <div class="carousel-item active" data-bs-interval="10000">
-            <img src="../../../assets/Music/Trending-Songs-Thumbnails/hard_on_yourself.png" style="height: 100%; width: 100%;" class="d-block w-100" alt="...">
+            <img src="../../../assets/Music/Trending-Songs-Thumbnails/hard_on_yourself.png" (click)="getSong('HardOnYourselfSong')" style="height: 100%; width: 100%;" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item" data-bs-interval="2000">
-            <img src="../../../assets/Music/Trending-Songs-Thumbnails/mere-yaara.png" style="height: 100%; width: 100%;" class="d-block w-100" alt="...">
+            <img src="../../../assets/Music/Trending-Songs-Thumbnails/mere-yaara.png" (click)="getSong('MereYaaraaSong')" style="height: 100%; width: 100%;" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="../../../assets/Music/Trending-Songs-Thumbnails/arijit.png" class="d-block w-100" alt="...">
+            <img src="../../../assets/Music/Trending-Songs-Thumbnails/raatanLambiyan.png" (click)="getSong('RaataanLambiyanSong')" class="d-block w-100" alt="...">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -42,7 +41,7 @@
         <ul>
           <li>
             <article class="menu-item">
-              <img src="../../../assets/Music/New-Release-Thumbnails/kusu-kusu.png" style="height: 100%; width: 100%;" class="photo" alt="menu item">
+              <img src="../../../assets/Music/New-Release-Thumbnails/kusu-kusu.png" name="KusuKusuSong" (click)="getSong('KusuKusuSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
               <div class="item-info">
               </div>
               <!-- <header> -->
@@ -53,7 +52,7 @@
           </li>
           <li>
             <article class="menu-item">
-              <img src="../../../assets/Music/New-Release-Thumbnails/jugnu.png" style="height: 100%; width: 100%;" class="photo" alt="menu item">
+              <img src="../../../assets/Music/New-Release-Thumbnails/jugnu.png" name="JugnuSong" (click)="getSong('JugnuSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
               <div class="item-info">
               </div>
               <!-- <header> -->
@@ -64,7 +63,7 @@
           </li>
           <li>
             <article class="menu-item">
-                <img src="../../../assets/Music/New-Release-Thumbnails/ranjha.png" routerLink="/player"  style="height: 100%; width: 100%;" class="photo" alt="menu item">
+                <img src="../../../assets/Music/New-Release-Thumbnails/ranjha.png" name="RanjhaSong" (click)="getSong('RanjhaSong')" routerLink="/player"  style="height: 100%; width: 100%;" class="photo" alt="menu item">
               <div class="item-info">
               </div>
               <!-- <header> -->
@@ -75,7 +74,7 @@
           </li>
           <li>
             <article class="menu-item">
-              <img src="../../../assets/Music/New-Release-Thumbnails/tip-tip.png" style="height: 100%; width: 100%;" class="photo" alt="menu item">
+              <img src="../../../assets/Music/New-Release-Thumbnails/tip-tip.png" name="TipTipSong" (click)="getSong('TipTipSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
               <div class="item-info">
               </div>
               <!-- <header> -->
@@ -86,7 +85,7 @@
           </li>
           <li>
             <article class="menu-item">
-              <img src="../../../assets/Music/New-Release-Thumbnails/meri-zindagi.png" style="height: 100%; width: 100%;" class="photo" alt="menu item">
+              <img src="../../../assets/Music/New-Release-Thumbnails/meri-zindagi.png" name="MeriZindagiSong" (click)="getSong('MeriZindagiSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
               <div class="item-info">
               </div>
               <!-- <header> -->
@@ -106,7 +105,7 @@
         <ul>
           <li>
             <article class="menu-item">
-              <img src="../../../assets/Music/Bollywood-Thumbnails/bom-diggy.png" style="height: 100%; width: 100%;" class="photo" alt="menu item">
+              <img src="../../../assets/Music/Bollywood-Thumbnails/bom-diggy.png" (click)="getSong('BomDiggyDiggySong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
               <div class="item-info">
               </div>
               <!-- <header> -->
@@ -117,7 +116,7 @@
           </li>
           <li>
             <article class="menu-item">
-              <img src="../../../assets/Music/Bollywood-Thumbnails/asal_me.png" style="height: 100%; width: 100%;" class="photo" alt="menu item">
+              <img src="../../../assets/Music/Bollywood-Thumbnails/asal_me.png" (click)="getSong('AsalMeinSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
               <div class="item-info">
               </div>
               <!-- <header> -->
@@ -128,7 +127,7 @@
           </li>
           <li>
             <article class="menu-item">
-              <img src="../../../assets/Music/Bollywood-Thumbnails/kya-baat-ay-punjabi-song-lyrics.png" style="height: 100%; width: 100%;" class="photo" alt="menu item">
+              <img src="../../../assets/Music/Bollywood-Thumbnails/kya-baat-ay-punjabi-song-lyrics.png" (click)="getSong('KyaBaatAySong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
               <div class="item-info">
               </div>
               <!-- <header> -->
@@ -139,7 +138,7 @@
           </li>
           <li>
             <article class="menu-item">
-              <img src="../../../assets/Music/Bollywood-Thumbnails/naach-meri-rani.png" style="height: 100%; width: 100%;" class="photo" alt="menu item">
+              <img src="../../../assets/Music/Bollywood-Thumbnails/naach-meri-rani.png" (click)="getSong('NaachMeriRaniSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
               <div class="item-info">
               </div>
               <!-- <header> -->
@@ -150,7 +149,7 @@
           </li>
           <li>
             <article class="menu-item">
-              <img src="../../../assets/Music/Bollywood-Thumbnails/sooraj-dooba.png" style="height: 100%; width: 100%;" class="photo" alt="menu item">
+              <img src="../../../assets/Music/Bollywood-Thumbnails/sooraj-dooba.png" (click)="getSong('SoorajDoobaHainSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
               <div class="item-info">
               </div>
               <!-- <header> -->
@@ -168,7 +167,7 @@
         <ul>
           <li>
             <article class="menu-item">
-              <img src="../../../assets/Music/English-Thumbnail/believer.png" style="height: 100%; width: 100%;" class="photo" alt="menu item">
+              <img src="../../../assets/Music/English-Thumbnails/believer.png" (click)="getSong('BelieverSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
               <div class="item-info">
               </div>
               <!-- <header> -->
@@ -179,7 +178,7 @@
           </li>
           <li>
             <article class="menu-item">
-              <img src="../../../assets/Music/English-Thumbnail/cheap_thrills.png" style="height: 100%; width: 100%;" class="photo" alt="menu item">
+              <img src="../../../assets/Music/English-Thumbnails/cheap_thrills.png" (click)="getSong('ChipThrillsSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
               <div class="item-info">
               </div>
               <!-- <header> -->
@@ -190,7 +189,7 @@
           </li>
           <li>
             <article class="menu-item">
-              <img src="../../../assets/Music/English-Thumbnail/new_rules.png" style="height: 100%; width: 100%;" class="photo" alt="menu item">
+              <img src="../../../assets/Music/English-Thumbnails/new_rules.png" (click)="getSong('NewRulesSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
               <div class="item-info">
               </div>
               <!-- <header> -->
@@ -202,7 +201,7 @@
           <li>
             <article class="menu-item">
               <a href="">  
-                <img src="../../../assets/Music/English-Thumbnail/see-you-again.png" style="height: 100%; width: 100%;"  class="photo" alt="menu item">
+                <img src="../../../assets/Music/English-Thumbnails/see-you-again.png" (click)="getSong('SeeYouAgainSong')" style="height: 100%; width: 100%;"  class="photo" alt="menu item">
               </a>
               <div class="item-info">
               </div>
@@ -214,7 +213,7 @@
           </li>
           <li>
             <article class="menu-item">
-              <img src="../../../assets/Music/English-Thumbnail/J_Balvin_Mi_Gente.png" style="height: 100%; width: 100%;" class="photo" alt="menu item">
+              <img src="../../../assets/Music/English-Thumbnails/J_Balvin_Mi_Gente.png" (click)="getSong('MiGenteSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
               <div class="item-info">
               </div>
               <!-- <header> -->
@@ -227,3 +226,5 @@
       </div>
     </section>
 </body>
+
+src\assets\Music\Engilsh-Songs\See You Again.mp3

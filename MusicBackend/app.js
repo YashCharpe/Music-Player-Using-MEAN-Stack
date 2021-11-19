@@ -29,7 +29,6 @@ const userRouter = require('./routes/users')
 app.use('/',userRouter)
 
 
-
 app.listen(9000,()=>{
     console.log('Server Started')
 })
