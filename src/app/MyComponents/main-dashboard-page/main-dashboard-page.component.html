@@ -1,6 +1,7 @@
 
 
 <body style="background-color:#0e0d0d;">
+  <app-navbar-dashboard></app-navbar-dashboard>
     <section class="menu">
       <!-- title -->
       <div class="title">
@@ -225,6 +226,19 @@
         </ul>
       </div>
     </section>
-</body>
 
-src\assets\Music\Engilsh-Songs\See You Again.mp3
+    <!-- music footer -->
+    <div class="footer">
+      
+      <i class="fas fa-backward prevBtn"></i>
+      <i class="far fa-play-circle playBtn" (click)="playAudio()"></i>
+      <i class="fas fa-forward nextBtn"></i>
+      <p>Ranjha</p>
+      <div class="footerImg">
+        <img src="../../../assets/Music/New-Release-Thumbnails/ranjha.png" alt="" >
+      </div>
+    </div>
+    </body>
+
+
+

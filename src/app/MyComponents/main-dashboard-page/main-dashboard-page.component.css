@@ -279,4 +279,45 @@ li{
   margin:0 10px -10px 0; 
 }
 
+/* music footer */
 
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #444444;
+  color: white;
+  
+  height: 7rem;
+}
+
+.prevBtn{
+ margin: 2.5rem 2rem 0 0;
+ font-size: 2rem;
+ margin-left: 40rem;
+}
+
+.playBtn{
+  margin-top:2.5rem;
+  font-size: 3rem;
+}
+
+
+
+.nextBtn{
+  margin: 2.5rem 0 0 2rem;
+  font-size: 2rem;
+}
+
+.footerImg{
+  height:100%;
+  width: 8rem;
+  margin: -5rem 0 0 1rem;
+}
+.footer p{
+  text-align: start;
+  color: white;
+  margin: -3rem 0 0 10rem;
+  font-size: 1.7rem;
+ }
