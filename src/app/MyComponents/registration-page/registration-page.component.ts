@@ -33,7 +33,7 @@ export class RegistrationPageComponent implements OnInit {
       this.backendApi.createNewAccount(data).subscribe(data=>{
         console.warn(data)
       })
-      alert(this.name+"Account Created Successfully!")
+      alert("Hey! "+this.name+", Account Created Successfully!")
     }
   }
 }

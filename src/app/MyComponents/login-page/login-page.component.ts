@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms'
+import { Router } from '@angular/router';
 import { BackendApiService } from '../../services/backend-api.service'
 
 @Component({
@@ -12,7 +13,7 @@ export class LoginPageComponent implements OnInit {
   emailId: string = ""
   password: string = ""
 
-  constructor(private backendApi: BackendApiService) {
+  constructor(private backendApi: BackendApiService,public router:Router) {
       
   }
 
@@ -29,11 +30,10 @@ export class LoginPageComponent implements OnInit {
         console.log("User NOT FOUND")
       }
       else{
+
         alert("Sucessfully Logged in!")
+        this.router.navigate(['/dashboard'])
       }
     })
-
-
   }
-
 }

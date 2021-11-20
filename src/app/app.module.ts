@@ -19,7 +19,8 @@ const appRoutes:Routes = [
   {path:'login',component:LoginPageComponent},
   {path:'register',component:RegistrationPageComponent},
   {path:'dashboard',component:MainDashboardPageComponent},
-  {path:'player',component:MusicPlayerDashboardComponent}
+  {path:'player',component:MusicPlayerDashboardComponent},
+  {path:'player/:name',component:MusicPlayerDashboardComponent}
 ]
 
 @NgModule({

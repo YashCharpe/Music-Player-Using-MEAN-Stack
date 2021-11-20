@@ -288,14 +288,14 @@ li{
   width: 100%;
   background-color: #444444;
   color: white;
-  text-align: center;
-  height: 8rem;
+  
+  height: 7rem;
 }
 
 .prevBtn{
  margin: 2.5rem 2rem 0 0;
  font-size: 2rem;
-
+ margin-left: 40rem;
 }
 
 .playBtn{
@@ -303,19 +303,21 @@ li{
   font-size: 3rem;
 }
 
+
+
 .nextBtn{
   margin: 2.5rem 0 0 2rem;
   font-size: 2rem;
 }
 
 .footerImg{
-  width: 10%;
   height:100%;
-  object-fit: contain;
+  width: 8rem;
+  margin: -5rem 0 0 1rem;
 }
 .footer p{
   text-align: start;
   color: white;
-  margin: -3rem 0 0 3rem;
+  margin: -3rem 0 0 10rem;
   font-size: 1.7rem;
  }

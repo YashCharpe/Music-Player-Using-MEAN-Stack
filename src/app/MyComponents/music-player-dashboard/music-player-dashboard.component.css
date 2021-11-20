@@ -327,3 +327,10 @@ body {
         margin-inline: auto;
     }
 }
+
+.fav_song{
+	color: #FF5F7E;
+  }
+  .fav_song:hover{
+      color: black;
+  }

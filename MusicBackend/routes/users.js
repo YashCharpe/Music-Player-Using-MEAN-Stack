@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const User = require('../models/user')
+const Music = require('../models/music')
 
 router.get('/users',async(req,res)=>{
     try{
@@ -29,6 +30,41 @@ router.get('/users/:emailId',async(req,res)=>{
     try{
         const user = await User.findOne({emailId:req.params.emailId})
         res.json(user)
+    }catch(err){
+        res.send("Error: "+err)
+    }
+})
+
+router.get('/musics', async(req,res)=>{
+    try{
+        const music = await Music.find()
+        res.json(music)
+
+    }catch(err){
+        res.send("Error: "+err)
+    }
+})
+
+router.get('/musics/:musicId',async(req,res)=>{
+    try{
+        const music = await Music.find({musicId:req.params.musicId})
+        res.json(music)
+    }catch(err){
+        res.send("Error: "+err)
+    }
+})
+
+router.post('/musics',async(req,res)=>{
+    const music = new Music({
+        musicId: req.body.musicId,
+        musicName: req.body.musicName,
+        musicPath: req.body.musicPath,
+        thumbnailPath: req.body.thumbnailPath,
+        artistName: req.body.artistName 
+    })
+    try{
+        const m1 = await music.save()
+        res.json(m1)
     }catch(err){
         res.send("Error: "+err)
     }

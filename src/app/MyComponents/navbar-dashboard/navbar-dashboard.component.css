@@ -2,6 +2,7 @@
 .profile{
     font-size: 2rem;
     /* border-right: 5px solid #c59d5f; */
+    
 }
 
  .dropbtn {
@@ -35,6 +36,17 @@
 
 .dropdown-content a:hover {background-color: #ddd;}
 
-.dropdown:hover .dropdown-content {display: block; right: 20px;}
+.dropdown:hover .dropdown-content {
+  display: block;
+  right: 3rem;
+  top:3rem;
+}
 
-/* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+.logo{
+  margin: 0.5rem;
+}
+
+.logoTitle{
+  margin: -3.3rem 0 0 5rem;
+  color: aliceblue;
+}
