@@ -44,9 +44,12 @@
 
 .logo{
   margin: 0.5rem;
+  width: 60px;
+  padding: 10px;
 }
 
 .logoTitle{
   margin: -3.3rem 0 0 5rem;
   color: aliceblue;
+  font-size: 24px;
 }
