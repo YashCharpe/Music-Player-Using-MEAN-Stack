@@ -12,7 +12,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClient,HttpClientModule} from '@angular/common/http';
 import { MainDashboardPageComponent } from './MyComponents/main-dashboard-page/main-dashboard-page.component';
 import { NavbarDashboardComponent } from './MyComponents/navbar-dashboard/navbar-dashboard.component';
-import { MusicPlayerDashboardComponent } from './MyComponents/music-player-dashboard/music-player-dashboard.component'
+import { MusicPlayerDashboardComponent } from './MyComponents/music-player-dashboard/music-player-dashboard.component';
+import { ProfilePageComponent } from './MyComponent/profile-page/profile-page.component'
 
 const appRoutes:Routes = [
   {path:'',component:IndexPageComponent},
@@ -31,7 +32,8 @@ const appRoutes:Routes = [
     RegistrationPageComponent,
     MainDashboardPageComponent,
     NavbarDashboardComponent,
-    MusicPlayerDashboardComponent
+    MusicPlayerDashboardComponent,
+    ProfilePageComponent
   ],
   imports: [
     BrowserModule,
