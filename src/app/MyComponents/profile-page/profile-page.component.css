@@ -1,0 +1,35 @@
+
+.card{
+    border: 1px solid black;
+    height: 40rem;
+    width: 40rem;
+    margin: 3.5rem 0 0 27rem;
+    box-shadow: 5px 5px 10px black; 
+    background-color:#DDD;
+}
+
+.profileImg{
+    font-size: 5rem;
+    padding: 1rem;
+    margin-left: 0.2rem;
+}
+
+.profileBox{
+    border: 1px solid black;
+    margin: 0.5rem 0 0.5rem 2rem;
+    width: 7rem;
+    border-radius: 1rem;
+}
+.userDetails {
+    padding: 0 0 0 2rem;
+    word-spacing: 1.5px;
+}
+
+.userDetails h4{
+margin:-2.4rem 0 0 6rem;
+line-height: 2rem;
+}
+
+.btn{
+    margin-top:10.5rem;
+}

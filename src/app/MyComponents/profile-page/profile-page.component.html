@@ -1,0 +1,21 @@
+<body style="background-color:#2F303A;">
+    <div class="card">
+        <div class="profileBox">
+            <i class="far fa-user profileImg"></i>
+        </div>
+        <div class="userDetails">
+            <h3>User: </h3><h4>{{username}}</h4> <br>
+            <h3>Email: </h3><h4>{{emailId}}</h4> <br>
+            <h3>Phone: </h3><h4>9089235321</h4> <br>
+            <h3>Password</h3><div class="form-group">
+                <form #userInfo="ngForm" (ngSubmit)="changePassword(userInfo.value)">
+                    <input type="password" class="form-control item" style="width: 200px;" id="pass" name="pass" [(ngModel)]="pass"  placeholder="Password">
+                    <div class="btn">
+                        <button type="submit" class="btn btn-outline-dark" style="margin-right: 20px;" >Change Password</button>
+                        <button type="button" class="btn btn-outline-dark " style="margin-left: 20px;" (click)="deleteAccount()"> Delete  Profile</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

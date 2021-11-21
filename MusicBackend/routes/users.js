@@ -29,7 +29,7 @@ router.post('/users', async (req, res) => {
 
 router.get('/users/:emailId', async (req, res) => {
     try {
-        const user = await User.findOne({ emailId: req.params.emailId })
+        const user = await User.find({ emailId: req.params.emailId })
         res.json(user)
     } catch (err) {
         res.send("Error: " + err)
@@ -46,6 +46,26 @@ router.get('/users/true/true', async (req, res) => {
 router.patch('/users/:emailId',async(req,res)=>{
     try{
         const user = await User.updateOne({emailId:req.params.emailId},{$set:{active_status:"true"}})
+        res.json(user)
+    }catch(err){
+        res.send("Error: "+err)
+    }
+})
+
+router.patch('/users/:emailId/:password',async(req,res)=>{
+    try{
+
+        const user = await User.findOneAndUpdate({emailId:req.params.emailId},{$set:{password:req.params.password}})
+        res.json(user)
+
+    }catch(err){
+        res.send("Error: "+err)
+    }
+})
+
+router.delete('/users/:emailId',async(req,res)=>{
+    try{
+        const user = await User.findOneAndDelete({emailId:req.params.emailId})
         res.json(user)
     }catch(err){
         res.send("Error: "+err)
