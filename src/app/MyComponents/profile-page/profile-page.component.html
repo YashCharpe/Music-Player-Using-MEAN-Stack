@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<app-navbar-dashboard></app-navbar-dashboard>
+<body>
+    <div class="card">
+        <i class="fas fa-guitar guitarImg1"></i>
+        <div class="profileBox">
+            <i class="far fa-user profileImg"></i>
+        </div>
+        <div class="userDetails">
+            <i class="fas fa-music musicImg1"></i>
+            <h3>User: </h3><h4>{{username}}</h4> <br>
+            <h3>Email: </h3><h4>{{emailId}}</h4> <br>
+            <h3>Phone: </h3><h4>9089235321</h4> <br>
+            <i class="fas fa-headphones headphoneImg1"></i>
+            <h3>Password</h3><div class="form-group">
+                <form #userInfo="ngForm" (ngSubmit)="changePassword(userInfo.value)">
+                    <input type="password" class="form-control item" style="width: 200px;" id="pass" name="pass" [(ngModel)]="pass"  placeholder="Password">
+                    
+                        <button type="submit" class="btn btn-outline-dark updateBtn" style="margin-right: 20px;" >Change Password</button>
+                        <button type="button" class="btn btn-outline-dark deleteBtn " style="margin-left: 20px;" (click)="deleteAccount()"> Delete  Profile</button>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

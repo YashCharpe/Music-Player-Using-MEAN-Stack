@@ -3,7 +3,7 @@
 <div class="section">
     <div class="section__background">
         <img id="backgroundImage" class="section__background-image"
-            src="../../../assets/Music/New-Release-Thumbnails/ranjha.png" alt="">
+            [src]="thumbnailPath" alt="">
     </div>
     <div class="music-card__wrapper">
         <div class="music-card">
@@ -12,7 +12,7 @@
                 <div class="music-info">
                     <h2 class="music-name">{{musicName}}</h2>
                     <p class="music-artist">{{artistName}}</p>
-                     <i class="fas fa-heart fav_song"></i>
+                    <i class="fas fa-heart"[ngStyle]="{'color':color}" (click)="updatePlaylist()"></i>
                 </div>
 
                 <div class="music-progress">
@@ -26,7 +26,7 @@
                 <div class="music-controls">
                     <div id="prev" class="music-controls-item">
                         <!--<i class="fas fa-backward music-controls-item--icon"></i>-->
-                        <img src="../../../assets/backward.png" alt="" style="height: 40px;">
+                        <img src="../../../assets/backward.png" (click)="backward()" alt="" style="height: 40px;">
                     </div>
 
                     <div id="play" class="music-controls-item">
@@ -36,7 +36,7 @@
 
                     <div id="next" class="music-controls-item">
                         <!--<i class="fas fa-forward music-controls-item--icon"></i>-->
-                        <img src="../../../assets/forward.png" alt="" style="height: 40px;">
+                        <img src="../../../assets/forward.png" (click)="forward()" alt="" style="height: 40px;">
                     </div>
                 </div>
             </div>

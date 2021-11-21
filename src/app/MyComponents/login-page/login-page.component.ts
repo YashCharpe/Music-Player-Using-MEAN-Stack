@@ -13,26 +13,28 @@ export class LoginPageComponent implements OnInit {
   emailId: string = ""
   password: string = ""
 
-  constructor(private backendApi: BackendApiService,public router:Router) {
-      
+  constructor(private backendApi: BackendApiService, public router: Router) {
+
   }
 
   ngOnInit(): void {
   }
 
-  loginFunction(data:any) {
+  loginFunction(data: any) {
 
-    this.backendApi.checkEmailAndPassword(data,this.emailId).subscribe(data=>{
+    this.backendApi.checkEmailAndPassword(this.emailId).subscribe(data => {
       console.warn(data)
-      if(data==null)
-      {
+      if (data == null) {
         alert("User NOT FOUND")
         console.log("User NOT FOUND")
       }
-      else{
+      else {
 
         alert("Sucessfully Logged in!")
-        this.router.navigate(['/dashboard'])
+        this.backendApi.updateTrueStatus(this.emailId, data).subscribe(data => {
+          console.log("true")
+        })
+        this.router.navigate(['/dashboard'], { state: { data: this.emailId } })
       }
     })
   }

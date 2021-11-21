@@ -289,31 +289,43 @@ li{
   background-color: #444444;
   color: white;
   
-  height: 7rem;
+  height: 4rem;
 }
 
 .prevBtn{
- margin: 2.5rem 2rem 0 0;
+ margin: 1rem 2rem 0 0;
  font-size: 2rem;
  margin-left: 40rem;
 }
+.prevBtn:hover{
+  filter: drop-shadow(0 0 0.75rem black);
+  transition: all .2s;
+}
 
 .playBtn{
-  margin-top:2.5rem;
+  margin-top:0rem;
   font-size: 3rem;
 }
 
-
+.playBtn:hover{
+  filter: drop-shadow(0 0 0.75rem black);
+  transition: all .2s;
+}
 
 .nextBtn{
-  margin: 2.5rem 0 0 2rem;
+  margin: 1rem 0 0 2rem;
   font-size: 2rem;
 }
 
+.nextBtn:hover{
+  filter: drop-shadow(0 0 0.75rem black);
+  transition: all .2s;
+}
+
 .footerImg{
-  height:100%;
-  width: 8rem;
-  margin: -5rem 0 0 1rem;
+  height:5px;
+  width: 75px;
+  margin: -3rem 0 0 1rem;
 }
 .footer p{
   text-align: start;

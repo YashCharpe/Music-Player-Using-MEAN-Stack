@@ -6,11 +6,16 @@
 }
 
  .dropbtn {
-  background-color: #0e0d0d;
+  /* background-color: #0e0d0d; */
+  background-color: #2F303A;
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
+}
+
+.dropbtn:hover{
+  color: #0e0d0d;
 }
 
 .dropdown {
@@ -38,15 +43,18 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
-  right: 3rem;
+  right: 2.5rem;
   top:3rem;
 }
 
 .logo{
   margin: 0.5rem;
+  width: 60px;
+  padding: 10px;
 }
 
 .logoTitle{
   margin: -3.3rem 0 0 5rem;
   color: aliceblue;
+  font-size: 24px;
 }
