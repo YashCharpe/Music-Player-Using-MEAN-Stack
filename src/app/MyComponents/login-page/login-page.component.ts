@@ -31,9 +31,7 @@ export class LoginPageComponent implements OnInit {
       else {
 
         alert("Sucessfully Logged in!")
-        this.backendApi.updateTrueStatus(this.emailId, data).subscribe(data => {
-          console.log("true")
-        })
+        
         this.router.navigate(['/dashboard'], { state: { data: this.emailId } })
       }
     })

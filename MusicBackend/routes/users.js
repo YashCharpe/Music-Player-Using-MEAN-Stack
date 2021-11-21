@@ -43,14 +43,34 @@ router.get('/users/true/true', async (req, res) => {
         res.send("Error: " + err)
     }
 })
-router.patch('/users/:emailId',async(req,res)=>{
-    try{
-        const user = await User.updateOne({emailId:req.params.emailId},{$set:{active_status:"true"}})
+
+router.patch('/users/:emailId/true', async (req, res) => {
+    try {
+        const user = await User.findOneAndUpdate({emailId:req.params.emailId},{ $set:{ active_status: "true" }  })
         res.json(user)
-    }catch(err){
-        res.send("Error: "+err)
+    } catch (err) {
+        res.send("Error: " + err)
     }
 })
+
+router.patch('/users/:emailId/false', async (req, res) => {
+    try {
+        const user = await User.findOneAndUpdate({emailId:req.params.emailId},{ $set:{ active_status: "false" }  })
+        res.json(user)
+    } catch (err) {
+        res.send("Error: " + err)
+    }
+})
+
+
+// router.patch('/users/:emailId',async(req,res)=>{
+//     try{
+//         const user = await User.update({emailId:req.params.emailId},{$set:{active_status:"true"}})
+//         res.json(user)
+//     }catch(err){
+//         res.send("Error: "+err)
+//     }
+// })
 
 router.patch('/users/:emailId/:password',async(req,res)=>{
     try{
@@ -141,7 +161,7 @@ router.post('/users/:emailId/playlist', async (req, res) => {
 
 router.delete('/users/:emailId/playlist/:songId',async(req,res)=>{
     try{
-        const song = await Playlist.deleteOne({songId:req.params.songId})
+        const song = await Playlist.findOneAndRemove({songId:req.params.songId})
         res.json(song)
     }catch(err){
         res.send("Error: "+err)

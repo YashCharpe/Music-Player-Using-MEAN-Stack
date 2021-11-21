@@ -53,13 +53,13 @@ export class BackendApiService {
     return this.http.delete(url)
   }
 
-  updateTrueStatus(emailId:string,data:any){
-    let url = "http://localhost:9000/users/"+emailId;
-    return this.http.patch(url,data)
+  updateTrueStatus(emailId:string,active_status:string){
+    let url = "http://localhost:9000/users/"+emailId+"/true";
+    return this.http.patch(url,active_status)
   }
 
-  updateFalseStatus(emailId:string,data:any){
-    let url = "http://localhost:9000/users/"+emailId;
-    return this.http.patch(url,data)
+  updateFalseStatus(emailId:string,active_status:string){
+    let url = "http://localhost:9000/users/"+emailId+"/false";
+    return this.http.patch(url,active_status)
   }
 }

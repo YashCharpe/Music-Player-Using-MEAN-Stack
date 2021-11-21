@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { BackendApiService } from 'src/app/services/backend-api.service';
 
 @Component({
   selector: 'app-navbar-dashboard',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarDashboardComponent implements OnInit {
 
-  constructor() { }
+  emailId: string
+
+  constructor(private backendApi: BackendApiService, public router: Router) { }
 
   ngOnInit(): void {
+    this.backendApi.getAccount().subscribe(data => {
+      this.emailId = data[0].emailId
+    })
+  }
+
+  logout() {
+
+    this.backendApi.updateFalseStatus(this.emailId, "false").subscribe(data => {
+      alert("Logged Out Successfully!!!")
+    })
+
+
   }
 
 }

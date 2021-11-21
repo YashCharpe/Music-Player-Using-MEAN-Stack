@@ -21,14 +21,23 @@ export class MainDashboardPageComponent implements OnInit {
   newReleaseSongs: any;
 
   constructor(private router: Router, private backendApi: BackendApiService) {
+
+    this.emailId = history.state.data
+    console.log(this.emailId)
     this.backendApi.getAccount().subscribe(data => {
       this.emailId = data[0].emailId
       console.log(this.emailId)
     })
+
     this.songCounter =0;
   }
 
   ngOnInit(): void {
+
+
+    this.backendApi.updateTrueStatus(this.emailId, "true").subscribe(data => {
+      console.log("true")
+    })
 
     this.newReleaseSongs = [
       {
