@@ -228,13 +228,13 @@
     <!-- music footer -->
     <div class="footer">
       
-      <i class="fas fa-backward prevBtn"></i>
+      <i class="fas fa-backward prevBtn" (click)="backwardPlay()"></i>
       <i class="far fa-play-circle playBtn" (click)="playAudio()"></i>
-      <i class="fas fa-forward nextBtn"></i>
-      <p>Ranjha</p>
+      <i class="fas fa-forward nextBtn" (click)="forwardPlay()"></i>
+      <p>{{songName}}</p>
       <div class="footerImg">
         <img style="border: 2px solid #c59d5f;
-        border-radius: 10px;" src="../../../assets/Music/New-Release-Thumbnails/ranjha.png" alt="" >
+        border-radius: 10px;" src="{{imgSrc}}" alt="" >
       </div>
     </div>
     </body>
