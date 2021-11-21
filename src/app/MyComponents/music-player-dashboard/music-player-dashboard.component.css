@@ -330,7 +330,7 @@ body {
 
 .fav_song{
 	color: #FF5F7E;
-  }
-  .fav_song:hover{
-      color: black;
-  }
+}
+.fav_song:hover{
+    color: black;
+}

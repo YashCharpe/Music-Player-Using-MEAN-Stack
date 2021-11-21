@@ -10,35 +10,41 @@ import { BackendApiService } from '../../services/backend-api.service'
 })
 export class MainDashboardPageComponent implements OnInit {
 
-
   counter = 0;
+  emailId: string
   audio = new Audio()
 
-  constructor(private router:Router) { }
+  constructor(private router: Router, private backendApi: BackendApiService) {
+    this.backendApi.getAccount().subscribe(data => {
+      this.emailId = data[0].emailId
+      console.log(this.emailId)
+    })
+  }
 
   ngOnInit(): void {
+
     this.audio.src = "../../../assets/Music/New-Release-Songs/Ranjha - Shershaah 128 Kbps.mp3"
     this.counter = 0;
+    //this.emailId = history.state.data
   }
-  
-  playAudio(){
+
+  playAudio() {
 
     this.counter++
-    if(this.counter%2==0)
-    {
+    if (this.counter % 2 == 0) {
       this.audio.pause()
-      console.log("even: "+this.counter)
+      console.log("even: " + this.counter)
     }
-    else{
+    else {
       this.audio.play()
-      console.log("odd: "+this.counter)
+      console.log("odd: " + this.counter)
     }
 
   }
-  getSong(name:any){
+  getSong(name: any) {
     console.log(name)
 
-    this.router.navigate(["/player/"+name])
+    this.router.navigate(["/player/" + name], { state: { data: this.emailId } })
 
   }
 
