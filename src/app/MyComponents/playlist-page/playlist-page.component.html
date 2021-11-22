@@ -1,0 +1,16 @@
+<div style="text-align: center; margin: 100px 500px 100px 500px ;">
+    <table class="table table-dark" style="width: 600px; text-align: center; " border="1">
+        <thead>
+            <tr>
+                <th *ngFor = "let head of songPlaylist[0] | keys" >{{head}}</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor = "let item  of songPlaylist">
+                <td *ngFor = "let list of item | keys">{{item[list]}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

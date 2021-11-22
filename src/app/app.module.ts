@@ -13,7 +13,9 @@ import {HttpClient,HttpClientModule} from '@angular/common/http';
 import { MainDashboardPageComponent } from './MyComponents/main-dashboard-page/main-dashboard-page.component';
 import { NavbarDashboardComponent } from './MyComponents/navbar-dashboard/navbar-dashboard.component';
 import { MusicPlayerDashboardComponent } from './MyComponents/music-player-dashboard/music-player-dashboard.component';
-import { ProfilePageComponent } from './MyComponents/profile-page/profile-page.component'
+import { ProfilePageComponent } from './MyComponents/profile-page/profile-page.component';
+import { PlaylistPageComponent } from './MyComponents/playlist-page/playlist-page.component';
+import { CustomPipePipe } from './Pipe/custom-pipe.pipe'
 
 const appRoutes:Routes = [
   {path:'',component:IndexPageComponent},
@@ -22,7 +24,8 @@ const appRoutes:Routes = [
   {path:'dashboard',component:MainDashboardPageComponent},
   {path:'player',component:MusicPlayerDashboardComponent},
   {path:'player/:name',component:MusicPlayerDashboardComponent},
-  {path:'profile',component:ProfilePageComponent}
+  {path:'profile',component:ProfilePageComponent},
+  {path:'playlist',component:PlaylistPageComponent}
 ]
 
 @NgModule({
@@ -34,7 +37,9 @@ const appRoutes:Routes = [
     MainDashboardPageComponent,
     NavbarDashboardComponent,
     MusicPlayerDashboardComponent,
-    ProfilePageComponent
+    ProfilePageComponent,
+    PlaylistPageComponent,
+    CustomPipePipe
   ],
   imports: [
     BrowserModule,

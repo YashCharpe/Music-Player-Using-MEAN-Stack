@@ -10,6 +10,7 @@ import { BackendApiService } from 'src/app/services/backend-api.service';
 export class NavbarDashboardComponent implements OnInit {
 
   emailId: string
+  songPlaylist:any;
 
   constructor(private backendApi: BackendApiService, public router: Router) { }
 
@@ -17,6 +18,18 @@ export class NavbarDashboardComponent implements OnInit {
     this.backendApi.getAccount().subscribe(data => {
       this.emailId = data[0].emailId
     })
+  }
+
+  
+
+  playlist(){
+
+    // this.backendApi.getSongPlaylist(this.emailId).subscribe(data=>{
+    //   this.songPlaylist = data
+    //   console.log(this.songPlaylist)
+    // })
+    
+
   }
 
   logout() {

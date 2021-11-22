@@ -28,6 +28,11 @@ export class BackendApiService {
     return this.http.get(url)
   }
 
+  getSongPlaylist(emailId:string){
+    let url = "http://localhost:9000/users/"+emailId+"/playlist";
+    return this.http.get(url);
+  }
+
   postSongPlaylist(emailId:string,songId:string,songData:any){
     let url = "http://localhost:9000/users/"+emailId+"/playlist";
     return this.http.post(url,songData)
