@@ -1,57 +1,60 @@
-<nav class="navbar navbar-light ">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<div class="body">
+    <nav class="navbar navbar-light ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <div>
+                    <img src="../../../assets/logo.png" alt="" width="40" height="40"
+                        class="d-inline-block align-text-top">
+                    <h4 style="color: aliceblue; float: right; margin-left: 20px; margin-top: 5px;">Soundwave</h4>
+                </div>
+            </a>
+    
             <div>
-                <img src="../../../assets/logo.png" style="margin-left: 50px;" alt="" width="40" height="40"
-                    class="d-inline-block align-text-top">
-                <h4 style="color: aliceblue; float: right; margin-left: 20px; margin-top: 5px;">Soundwave</h4>
+                <a style="margin-right: 50px; color: aliceblue;text-decoration: none;" routerLink="/dashboard">Discover</a>
+                <a style="margin-right: 100px; color: aliceblue; text-decoration: none;" routerLink="/login">LogIn</a>
             </div>
-        </a>
-
-        <div>
-            <a style="margin-right: 50px; color: aliceblue;text-decoration: none;" routerLink="/dashboard">Discover</a>
-            <a style="margin-right: 100px; color: aliceblue; text-decoration: none;" routerLink="/login">LogIn</a>
         </div>
+    </nav>
+    <i class="fas fa-music musicImg3"></i>
+    <div>
+        <h1 class="join-style" style="float: left;">Join the &nbsp;</h1>
+        <span style="float: left;">
+            <h1 class="fun-style"> fun.</h1>
+        </span>
     </div>
-</nav>
-
-<div>
-    <h1 class="join-style" style="float: left;">Join the &nbsp;</h1>
-    <span style="float: left;">
-        <h1 class="fun-style"> fun.</h1>
-    </span>
-</div>
-
-
-<div class="registration-form" style="float: right; margin-right: 100px; width: 500px;height: 400px;">
-    <form #userInfo="ngForm" (ngSubmit)="createAccount(userInfo.value)" style="background-color: #1f2127;">
-        <div class="form-icon">
-            <span><i class="icon icon-user"></i></span>
-        </div>
-        <div class="form-group">
-            <input type="text" class="form-control item" id="username" name="name" [(ngModel)]="name" placeholder="Username">
-        </div>
-        <div class="form-group">
-            <input type="password" class="form-control item" id="password" name="password" [(ngModel)]="password" placeholder="Password">
-        </div>
-
-        <div class="form-group">
-            <input type="email" class="form-control item" id="emailId" name="emailId" [(ngModel)]="emailId" placeholder="Email ID">
-        </div>
-
-        <div class="form-group">
-            <input type="text" class="form-control item" id="mobile" name="mobile" [(ngModel)]="mobile" placeholder="Mobile No">
+    <i class="fas fa-music musicImg2"></i>
+    
+    <div class="registration-form" style="float: right; margin-right: 100px; width: 500px;height: 400px;">
+        <form #userInfo="ngForm" (ngSubmit)="createAccount(userInfo.value)" style="background-color: #1f2127;">
+            <div class="form-icon">
+                <span><i class="far fa-user-circle userIcon"></i></span>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control item" id="username" name="name" [(ngModel)]="name" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control item" id="password" name="password" [(ngModel)]="password" placeholder="Password">
+            </div>
+    
+            <div class="form-group">
+                <input type="email" class="form-control item" id="emailId" name="emailId" [(ngModel)]="emailId" placeholder="Email ID">
+            </div>
+    
+            <div class="form-group">
+                <input type="text" class="form-control item" id="mobile" name="mobile" [(ngModel)]="mobile" placeholder="Mobile No">
+            </div>
+            
+    
+            <div class="form-group" style="float: left;">
+                <button type="submit" class="btn btn-block create-account">Create Account</button>
+            </div>
+            <div class="form-group" style="float: right;">
+                <button type="button" routerLink="/login" class="btn btn-block create-account">Have Account ?</button>
+            </div>
+        </form>
+        <div class="social-media">
         </div>
         
-
-        <div class="form-group" style="float: left;">
-            <button type="submit" class="btn btn-block create-account">Create Account</button>
-        </div>
-        <div class="form-group" style="float: right;">
-            <button type="button" routerLink="/login" class="btn btn-block create-account">Have Account ?</button>
-        </div>
-    </form>
-    <div class="social-media">
-
     </div>
 </div>

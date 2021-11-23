@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+h1{
+    color: hotpink;
+    margin: 2rem 0 0 35rem;
+    font-family: 'Special Elite', cursive;
+    
+}
+.tableContent{
+    text-align: center;
+    margin: 5rem 0 0 28rem; 
+    width: 30rem;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
