@@ -1,308 +1,334 @@
 <body style="background-color:#2F303A;">
   <app-navbar-dashboard></app-navbar-dashboard>
-    <section class="menu">
-      <!-- title -->
-      <div class="title">
-        <h2 style="color: aliceblue;">Dashboard</h2>
-        <div class="underline"></div>
-      </div>
-      
-      <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="margin: 0 auto 8rem auto; width: 800px; height: 400px; ">
-        <h3 style="margin: 1.25rem 15rem; color: aliceblue; text-align: center;">Trending</h3>
-        <div class="carousel-inner" style="border-radius: 2rem;">
-          <div class="carousel-item active" data-bs-interval="10000">
-            <img src="../../../assets/Music/Trending-Songs-Thumbnails/hard_on_yourself.png" (click)="getSong('HardOnYourselfSong')" style="height: 100%; width: 100%;" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item" data-bs-interval="2000">
-            <img src="../../../assets/Music/Trending-Songs-Thumbnails/mere-yaara.png" (click)="getSong('MereYaaraaSong')" style="height: 100%; width: 100%;" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="../../../assets/Music/Trending-Songs-Thumbnails/raatanLambiyan.png" (click)="getSong('RaataanLambiyanSong')" class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-
-      <br><br>
-      
-<!--NEW RELEASES-->
-      <!-- menu items -->
-      <h3 style="margin: 1.25rem 15rem; color: aliceblue;">New Releases</h3>
-      <div class="section-center">
-        <!-- single item -->
-        <ul>
-          <li>
-            <article class="menu-item">
-              <img src="../../../assets/Music/New-Release-Thumbnails/kusu-kusu.png" name="KusuKusuSong" (click)="getSong('KusuKusuSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
-              <div class="item-info">
-              </div>
-              <!-- <header> -->
-                <h4 style="margin:1rem 0; text-align: center; color: aliceblue;">Kusu Kusu</h4>
-              <!-- </header> -->
-            </article>
-            <!-- end of single item -->
-          </li>
-          <li>
-            <article class="menu-item">
-              <img src="../../../assets/Music/New-Release-Thumbnails/jugnu.png" name="JugnuSong" (click)="getSong('JugnuSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
-              <div class="item-info">
-              </div>
-              <!-- <header> -->
-                <h4 style="margin:1rem 0; text-align: center; color: aliceblue;">Jugnu</h4>
-              <!-- </header> -->
-            </article>
-            <!-- end of single item -->
-          </li>
-          <li>
-            <article class="menu-item">
-                <img src="../../../assets/Music/New-Release-Thumbnails/ranjha.png" name="RanjhaSong" (click)="getSong('RanjhaSong')" routerLink="/player"  style="height: 100%; width: 100%;" class="photo" alt="menu item">
-              <div class="item-info">
-              </div>
-              <!-- <header> -->
-                <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Ranjha</h4>
-              <!-- </header> -->
-            </article>
-            <!-- end of single item -->
-          </li>
-          <li>
-            <article class="menu-item">
-              <img src="../../../assets/Music/New-Release-Thumbnails/tip-tip.png" name="TipTipSong" (click)="getSong('TipTipSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
-              <div class="item-info">
-              </div>
-              <!-- <header> -->
-                <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Tip Tip</h4>
-              <!-- </header> -->
-            </article>
-            <!-- end of single item -->
-          </li>
-          <li>
-            <article class="menu-item">
-              <img src="../../../assets/Music/New-Release-Thumbnails/meri-zindagi.png" name="MeriZindagiSong" (click)="getSong('MeriZindagiSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
-              <div class="item-info">
-              </div>
-              <!-- <header> -->
-                <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Meri Zindagi Hai Tu</h4>
-              <!-- </header> -->
-            </article>
-            <!-- end of single item -->
-          </li>
-        </ul>
-      </div>
-
-<!--TOP BOLLYWOOD-->
-
-      <h3 style="margin: 1.25rem 15rem;color: aliceblue; ">Top Bollywood</h3>
-      <div class="section-center">
-        <!-- single item -->
-        <ul>
-          <li>
-            <article class="menu-item">
-              <img src="../../../assets/Music/Bollywood-Thumbnails/bom-diggy.png" (click)="getSong('BomDiggyDiggySong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
-              <div class="item-info">
-              </div>
-              <!-- <header> -->
-                <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Bom Diggy Diggy</h4>
-              <!-- </header> -->
-            </article>
-            <!-- end of single item -->
-          </li>
-          <li>
-            <article class="menu-item">
-              <img src="../../../assets/Music/Bollywood-Thumbnails/asal_me.png" (click)="getSong('AsalMeinSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
-              <div class="item-info">
-              </div>
-              <!-- <header> -->
-                <h4 style="margin:1rem 0; text-align: center; color: aliceblue;">Asal Mein</h4>
-              <!-- </header> -->
-            </article>
-            <!-- end of single item -->
-          </li>
-          <li>
-            <article class="menu-item">
-              <img src="../../../assets/Music/Bollywood-Thumbnails/kya-baat-ay-punjabi-song-lyrics.png" (click)="getSong('KyaBaatAySong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
-              <div class="item-info">
-              </div>
-              <!-- <header> -->
-                <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Kya Baat Ay</h4>
-              <!-- </header> -->
-            </article>
-            <!-- end of single item -->
-          </li>
-          <li>
-            <article class="menu-item">
-              <img src="../../../assets/Music/Bollywood-Thumbnails/naach-meri-rani.png" (click)="getSong('NaachMeriRaniSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
-              <div class="item-info">
-              </div>
-              <!-- <header> -->
-                <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Naach Meri Rani</h4>
-              <!-- </header> -->
-            </article>
-            <!-- end of single item -->
-          </li>
-          <li>
-            <article class="menu-item">
-              <img src="../../../assets/Music/Bollywood-Thumbnails/sooraj-dooba.png" (click)="getSong('SoorajDoobaHainSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
-              <div class="item-info">
-              </div>
-              <!-- <header> -->
-                <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Sooraj Dooba He</h4>
-              <!-- </header> -->
-            </article>
-            <!-- end of single item -->
-          </li>
-        </ul>
-      </div>
-
-      <h3 style="margin: 1.25rem 15rem; color: aliceblue;">Top English</h3>
-      <div class="section-center">
-        <!-- single item -->
-        <ul>
-          <li>
-            <article class="menu-item">
-              <img src="../../../assets/Music/English-Thumbnails/believer.png" (click)="getSong('BelieverSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
-              <div class="item-info">
-              </div>
-              <!-- <header> -->
-                <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Believer</h4>
-              <!-- </header> -->
-            </article>
-            <!-- end of single item -->
-          </li>
-          <li>
-            <article class="menu-item">
-              <img src="../../../assets/Music/English-Thumbnails/cheap_thrills.png" (click)="getSong('ChipThrillsSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
-              <div class="item-info">
-              </div>
-              <!-- <header> -->
-                <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Sia-Chip Thrills</h4>
-              <!-- </header> -->
-            </article>
-            <!-- end of single item -->
-          </li>
-          <li>
-            <article class="menu-item">
-              <img src="../../../assets/Music/English-Thumbnails/new_rules.png" (click)="getSong('NewRulesSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
-              <div class="item-info">
-              </div>
-              <!-- <header> -->
-                <h4 style="margin:1rem 0; text-align: center; color: aliceblue;">New Rules</h4>
-              <!-- </header> -->
-            </article>
-            <!-- end of single item -->
-          </li>
-          <li>
-            <article class="menu-item">
-              <img src="../../../assets/Music/English-Thumbnails/see-you-again.png" (click)="getSong('SeeYouAgainSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
-              <div class="item-info">
-              </div>
-              <!-- <header> -->
-                <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">See You Again</h4>
-              <!-- </header> -->
-            </article>
-            <!-- end of single item -->
-          </li>
-          <li>
-            <article class="menu-item">
-              <img src="../../../assets/Music/English-Thumbnails/J_Balvin_Mi_Gente.png" (click)="getSong('MiGenteSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
-              <div class="item-info">
-              </div>
-              <!-- <header> -->
-                <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Mi Gente</h4>
-              <!-- </header> -->
-            </article>
-            <!-- end of single item -->
-          </li>
-        </ul>
-      </div>
-      
-
-      
-      
-
-      <h3 style="margin: 1.25rem 15rem; color: aliceblue;">Marathi Hits</h3>
-      <div class="section-center">
-        <!-- single item -->
-        <ul>
-          <li>
-            <article class="menu-item">
-              <img src="../../../assets/Music/Marathi-Hits-Thumbnails/aala_re.png" (click)="getSong('AalaReSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
-              <div class="item-info">
-              </div>
-              <!-- <header> -->
-                <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Believer</h4>
-              <!-- </header> -->
-            </article>
-            <!-- end of single item -->
-          </li>
-          <li>
-            <article class="menu-item">
-              <img src="../../../assets/Music/Marathi-Hits-Thumbnails/aaliThumkat.png" (click)="getSong('AaliThumkatNaarSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
-              <div class="item-info">
-              </div>
-              <!-- <header> -->
-                <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Sia-Chip Thrills</h4>
-              <!-- </header> -->
-            </article>
-            <!-- end of single item -->
-          </li>
-          <li>
-            <article class="menu-item">
-              <img src="../../../assets/Music/Marathi-Hits-Thumbnails/mauli.png" (click)="getSong('MauliMauliSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
-              <div class="item-info">
-              </div>
-              <!-- <header> -->
-                <h4 style="margin:1rem 0; text-align: center; color: aliceblue;">New Rules</h4>
-              <!-- </header> -->
-            </article>
-            <!-- end of single item -->
-          </li>
-          <li>
-            <article class="menu-item">
-              <img src="../../../assets/Music/Marathi-Hits-Thumbnails/dhaaga.png" (click)="getSong('DhaagaDhaagaSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
-              <div class="item-info">
-              </div>
-              <!-- <header> -->
-                <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">See You Again</h4>
-              <!-- </header> -->
-            </article>
-            <!-- end of single item -->
-          </li>
-          <li>
-            <article class="menu-item">
-              <img src="../../../assets/Music/Marathi-Hits-Thumbnails/chabi.png" (click)="getSong('ChabidarChabiSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
-              <div class="item-info">
-              </div>
-              <!-- <header> -->
-                <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Mi Gente</h4>
-              <!-- </header> -->
-            </article>
-            <!-- end of single item -->
-          </li>
-        </ul>
-      </div>
-
-    </section>
-
-    <!-- music footer -->
-    <div class="footer">
-      
-      <i class="fas fa-chevron-circle-left prevBtn" (click)="backwardPlay()"></i>
-      <i class="far fa-play-circle playBtn" (click)="playAudio()"></i>
-      <i class="fas fa-chevron-circle-right nextBtn" (click)="forwardPlay()"></i>
-      <p>{{songName}}</p>
-      <div class="footerImg">
-        <img style="border: 2px solid #c59d5f;
-        border-radius: 10px;" src="{{imgSrc}}" alt="" >
-      </div>
+  <section class="menu">
+    <!-- title -->
+    <div class="title">
+      <h2 style="color: aliceblue;">Dashboard</h2>
+      <div class="underline"></div>
     </div>
-    </body>
+
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel"
+      style="margin: 0 auto 8rem auto; width: 800px; height: 400px; ">
+      <h3 style="margin: 1.25rem 15rem; color: aliceblue; text-align: center;">Trending</h3>
+      <div class="carousel-inner" style="border-radius: 2rem;">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="../../../assets/Music/Trending-Songs-Thumbnails/hard_on_yourself.png"
+            (click)="getSong('HardOnYourselfSong')" style="height: 100%; width: 100%;" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="../../../assets/Music/Trending-Songs-Thumbnails/mere-yaara.png" (click)="getSong('MereYaaraaSong')"
+            style="height: 100%; width: 100%;" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="../../../assets/Music/Trending-Songs-Thumbnails/raatanLambiyan.png"
+            (click)="getSong('RaataanLambiyanSong')" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <br><br>
+
+    <!--NEW RELEASES-->
+    <!-- menu items -->
+    <h3 style="margin: 1.25rem 15rem; color: aliceblue;">New Releases</h3>
+    <div class="section-center">
+      <!-- single item -->
+      <ul>
+        <li>
+          <article class="menu-item">
+            <img src="../../../assets/Music/New-Release-Thumbnails/kusu-kusu.png" name="KusuKusuSong"
+              (click)="getSong('KusuKusuSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
+            <div class="item-info">
+            </div>
+            <!-- <header> -->
+            <h4 style="margin:1rem 0; text-align: center; color: aliceblue;">Kusu Kusu</h4>
+            <!-- </header> -->
+          </article>
+          <!-- end of single item -->
+        </li>
+        <li>
+          <article class="menu-item">
+            <img src="../../../assets/Music/New-Release-Thumbnails/jugnu.png" name="JugnuSong"
+              (click)="getSong('JugnuSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
+            <div class="item-info">
+            </div>
+            <!-- <header> -->
+            <h4 style="margin:1rem 0; text-align: center; color: aliceblue;">Jugnu</h4>
+            <!-- </header> -->
+          </article>
+          <!-- end of single item -->
+        </li>
+        <li>
+          <article class="menu-item">
+            <img src="../../../assets/Music/New-Release-Thumbnails/ranjha.png" name="RanjhaSong"
+              (click)="getSong('RanjhaSong')" routerLink="/player" style="height: 100%; width: 100%;" class="photo"
+              alt="menu item">
+            <div class="item-info">
+            </div>
+            <!-- <header> -->
+            <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Ranjha</h4>
+            <!-- </header> -->
+          </article>
+          <!-- end of single item -->
+        </li>
+        <li>
+          <article class="menu-item">
+            <img src="../../../assets/Music/New-Release-Thumbnails/tip-tip.png" name="TipTipSong"
+              (click)="getSong('TipTipSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
+            <div class="item-info">
+            </div>
+            <!-- <header> -->
+            <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Tip Tip</h4>
+            <!-- </header> -->
+          </article>
+          <!-- end of single item -->
+        </li>
+        <li>
+          <article class="menu-item">
+            <img src="../../../assets/Music/New-Release-Thumbnails/meri-zindagi.png" name="MeriZindagiSong"
+              (click)="getSong('MeriZindagiSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
+            <div class="item-info">
+            </div>
+            <!-- <header> -->
+            <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Meri Zindagi Hai Tu</h4>
+            <!-- </header> -->
+          </article>
+          <!-- end of single item -->
+        </li>
+      </ul>
+    </div>
+
+    <!--TOP BOLLYWOOD-->
+
+    <h3 style="margin: 1.25rem 15rem;color: aliceblue; ">Top Bollywood</h3>
+    <div class="section-center">
+      <!-- single item -->
+      <ul>
+        <li>
+          <article class="menu-item">
+            <img src="../../../assets/Music/Bollywood-Thumbnails/bom-diggy.png" (click)="getSong('BomDiggyDiggySong')"
+              style="height: 100%; width: 100%;" class="photo" alt="menu item">
+            <div class="item-info">
+            </div>
+            <!-- <header> -->
+            <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Bom Diggy Diggy</h4>
+            <!-- </header> -->
+          </article>
+          <!-- end of single item -->
+        </li>
+        <li>
+          <article class="menu-item">
+            <img src="../../../assets/Music/Bollywood-Thumbnails/asal_me.png" (click)="getSong('AsalMeinSong')"
+              style="height: 100%; width: 100%;" class="photo" alt="menu item">
+            <div class="item-info">
+            </div>
+            <!-- <header> -->
+            <h4 style="margin:1rem 0; text-align: center; color: aliceblue;">Asal Mein</h4>
+            <!-- </header> -->
+          </article>
+          <!-- end of single item -->
+        </li>
+        <li>
+          <article class="menu-item">
+            <img src="../../../assets/Music/Bollywood-Thumbnails/kya-baat-ay-punjabi-song-lyrics.png"
+              (click)="getSong('KyaBaatAySong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
+            <div class="item-info">
+            </div>
+            <!-- <header> -->
+            <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Kya Baat Ay</h4>
+            <!-- </header> -->
+          </article>
+          <!-- end of single item -->
+        </li>
+        <li>
+          <article class="menu-item">
+            <img src="../../../assets/Music/Bollywood-Thumbnails/naach-meri-rani.png"
+              (click)="getSong('NaachMeriRaniSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
+            <div class="item-info">
+            </div>
+            <!-- <header> -->
+            <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Naach Meri Rani</h4>
+            <!-- </header> -->
+          </article>
+          <!-- end of single item -->
+        </li>
+        <li>
+          <article class="menu-item">
+            <img src="../../../assets/Music/Bollywood-Thumbnails/sooraj-dooba.png"
+              (click)="getSong('SoorajDoobaHainSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
+            <div class="item-info">
+            </div>
+            <!-- <header> -->
+            <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Sooraj Dooba He</h4>
+            <!-- </header> -->
+          </article>
+          <!-- end of single item -->
+        </li>
+      </ul>
+    </div>
+
+    <h3 style="margin: 1.25rem 15rem; color: aliceblue;">Top English</h3>
+    <div class="section-center">
+      <!-- single item -->
+      <ul>
+        <li>
+          <article class="menu-item">
+            <img src="../../../assets/Music/English-Thumbnails/believer.png" (click)="getSong('BelieverSong')"
+              style="height: 100%; width: 100%;" class="photo" alt="menu item">
+            <div class="item-info">
+            </div>
+            <!-- <header> -->
+            <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Believer</h4>
+            <!-- </header> -->
+          </article>
+          <!-- end of single item -->
+        </li>
+        <li>
+          <article class="menu-item">
+            <img src="../../../assets/Music/English-Thumbnails/cheap_thrills.png" (click)="getSong('ChipThrillsSong')"
+              style="height: 100%; width: 100%;" class="photo" alt="menu item">
+            <div class="item-info">
+            </div>
+            <!-- <header> -->
+            <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Sia-Chip Thrills</h4>
+            <!-- </header> -->
+          </article>
+          <!-- end of single item -->
+        </li>
+        <li>
+          <article class="menu-item">
+            <img src="../../../assets/Music/English-Thumbnails/new_rules.png" (click)="getSong('NewRulesSong')"
+              style="height: 100%; width: 100%;" class="photo" alt="menu item">
+            <div class="item-info">
+            </div>
+            <!-- <header> -->
+            <h4 style="margin:1rem 0; text-align: center; color: aliceblue;">New Rules</h4>
+            <!-- </header> -->
+          </article>
+          <!-- end of single item -->
+        </li>
+        <li>
+          <article class="menu-item">
+            <img src="../../../assets/Music/English-Thumbnails/see-you-again.png" (click)="getSong('SeeYouAgainSong')"
+              style="height: 100%; width: 100%;" class="photo" alt="menu item">
+            <div class="item-info">
+            </div>
+            <!-- <header> -->
+            <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">See You Again</h4>
+            <!-- </header> -->
+          </article>
+          <!-- end of single item -->
+        </li>
+        <li>
+          <article class="menu-item">
+            <img src="../../../assets/Music/English-Thumbnails/J_Balvin_Mi_Gente.png" (click)="getSong('MiGenteSong')"
+              style="height: 100%; width: 100%;" class="photo" alt="menu item">
+            <div class="item-info">
+            </div>
+            <!-- <header> -->
+            <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Mi Gente</h4>
+            <!-- </header> -->
+          </article>
+          <!-- end of single item -->
+        </li>
+      </ul>
+    </div>
+
+
+
+
+
+    <h3 style="margin: 1.25rem 15rem; color: aliceblue;">Marathi Hits</h3>
+    <div class="section-center">
+      <!-- single item -->
+      <ul>
+        <li>
+          <article class="menu-item">
+            <img src="../../../assets/Music/Marathi-Hits-Thumbnails/aala_re.png" (click)="getSong('AalaReSong')"
+              style="height: 100%; width: 100%;" class="photo" alt="menu item">
+            <div class="item-info">
+            </div>
+            <!-- <header> -->
+            <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Aala Re Raja</h4>
+            <!-- </header> -->
+          </article>
+          <!-- end of single item -->
+        </li>
+        <li>
+          <article class="menu-item">
+            <img src="../../../assets/Music/Marathi-Hits-Thumbnails/aaliThumkat.png"
+              (click)="getSong('AaliThumkatNaarSong')" style="height: 100%; width: 100%;" class="photo" alt="menu item">
+            <div class="item-info">
+            </div>
+            <!-- <header> -->
+            <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Aali Thumkat Naar</h4>
+            <!-- </header> -->
+          </article>
+          <!-- end of single item -->
+        </li>
+        <li>
+          <article class="menu-item">
+            <img src="../../../assets/Music/Marathi-Hits-Thumbnails/mauli.png" (click)="getSong('MauliMauliSong')"
+              style="height: 100%; width: 100%;" class="photo" alt="menu item">
+            <div class="item-info">
+            </div>
+            <!-- <header> -->
+            <h4 style="margin:1rem 0; text-align: center; color: aliceblue;">Mauli Mauli</h4>
+            <!-- </header> -->
+          </article>
+          <!-- end of single item -->
+        </li>
+        <li>
+          <article class="menu-item">
+            <img src="../../../assets/Music/Marathi-Hits-Thumbnails/dhaaga.png" (click)="getSong('DhaagaDhaagaSong')"
+              style="height: 100%; width: 100%;" class="photo" alt="menu item">
+            <div class="item-info">
+            </div>
+            <!-- <header> -->
+            <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Dhaaga Dhaaga</h4>
+            <!-- </header> -->
+          </article>
+          <!-- end of single item -->
+        </li>
+        <li>
+          <article class="menu-item">
+            <img src="../../../assets/Music/Marathi-Hits-Thumbnails/chabi.png" (click)="getSong('ChabidarChabiSong')"
+              style="height: 100%; width: 100%;" class="photo" alt="menu item">
+            <div class="item-info">
+            </div>
+            <!-- <header> -->
+            <h4 style="margin:1rem 0;text-align: center; color: aliceblue;">Chabidar Chabi</h4>
+            <!-- </header> -->
+          </article>
+          <!-- end of single item -->
+        </li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- music footer -->
+  <div class="footer">
+
+    <i class="fas fa-chevron-circle-left prevBtn" (click)="backwardPlay()"></i>
+    <!--<i class="far fa-play-circle playBtn" (click)="playAudio()"></i>-->
+    <i class="{{playButtonClass}}" (click)="playAudio()"></i>
+    <i class="fas fa-chevron-circle-right nextBtn" (click)="forwardPlay()"></i>
+    <p>{{songName}}</p>
+    <div class="footerImg">
+      <img style="border: 2px solid #c59d5f;
+        border-radius: 10px;" src="{{imgSrc}}" alt="">
+    </div>
+  </div>
+</body>
 <!-- <i class="far fa-pause-circle"></i> -->
-
-

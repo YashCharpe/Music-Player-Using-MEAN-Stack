@@ -16,6 +16,8 @@ export class MainDashboardPageComponent implements OnInit {
   imgSrc: string
   songName:string
 
+  playButtonClass:string = "far fa-play-circle playBtn"
+
   songCounter = 0;
 
   newReleaseSongs: any;
@@ -88,10 +90,12 @@ export class MainDashboardPageComponent implements OnInit {
 
     this.counter++
     if (this.counter % 2 == 0) {
+      this.playButtonClass = "far fa-play-circle playBtn"
       this.audio.pause()
       console.log("even: " + this.counter)
     }
     else {
+      this.playButtonClass = "far fa-pause-circle playBtn"
       this.audio.play()
       console.log("odd: " + this.counter)
     }

@@ -13,12 +13,12 @@ export class PlaylistPageComponent implements OnInit {
 
   emailId: string
   songPlaylist: any;
+  songNames: any;
 
   constructor(private backendApi: BackendApiService, public router: Router) {
 
   }
 
-  items = [{ name: "jean", surname: "kruger" }, { name: "bobby", surname: "marais" }]
 
   ngOnInit(): void {
     this.backendApi.getAccount().subscribe(data => {
@@ -27,7 +27,13 @@ export class PlaylistPageComponent implements OnInit {
       this.backendApi.getSongPlaylist(this.emailId).subscribe(data => {
         this.songPlaylist = data
         console.log(this.songPlaylist)
-        console.log(this.items)
+
+        for(let i=0;i<this.songPlaylist.length;i++){
+          this.songNames[i] = this.songPlaylist[i].songId
+        }
+
+        console.log(this.songNames)
+
       })
 
     })
