@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexPageComponent implements OnInit {
 
+  tabName = "SoundWave | Index"
+
   constructor() { }
 
   ngOnInit(): void {

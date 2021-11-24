@@ -24,15 +24,20 @@ export class LoginPageComponent implements OnInit {
 
     this.backendApi.checkEmailAndPassword(this.emailId).subscribe(data => {
       console.warn(data)
-      if (data == null) {
+      if (data[0] == null) {
         alert("User NOT FOUND")
         console.log("User NOT FOUND")
       }
       else {
 
-        alert("Sucessfully Logged in!")
-        
-        this.router.navigate(['/dashboard'], { state: { data: this.emailId } })
+        if (data[0].emailId == this.emailId && data[0].password == this.password) {
+          alert("Sucessfully Logged in!")
+
+          this.router.navigate(['/dashboard'], { state: { data: this.emailId } })
+        }
+        else{
+          alert("Wrong Credentials!")
+        }
       }
     })
   }
