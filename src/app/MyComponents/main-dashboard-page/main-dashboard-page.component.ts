@@ -14,9 +14,9 @@ export class MainDashboardPageComponent implements OnInit {
   emailId: string
   audio = new Audio()
   imgSrc: string
-  songName:string
+  songName: string
 
-  playButtonClass:string = "far fa-play-circle playBtn"
+  playButtonClass: string = "far fa-play-circle playBtn"
 
   songCounter = 0;
 
@@ -31,7 +31,7 @@ export class MainDashboardPageComponent implements OnInit {
       console.log(this.emailId)
     })
 
-    this.songCounter =0;
+    this.songCounter = 0;
   }
 
   ngOnInit(): void {
@@ -78,7 +78,7 @@ export class MainDashboardPageComponent implements OnInit {
         "artistName": "Udit Narayan & Alka Yagnik"
       }
     ]
-    this.songCounter =0;
+    this.songCounter = 0;
     this.audio.src = this.newReleaseSongs[this.songCounter].musicPath
     this.imgSrc = this.newReleaseSongs[this.songCounter].thumbnailPath
     this.songName = this.newReleaseSongs[this.songCounter].musicName
@@ -111,11 +111,11 @@ export class MainDashboardPageComponent implements OnInit {
   forwardPlay() {
     this.songCounter++;
 
-    if(this.songCounter==5){
-      this.songCounter=0;
+    if (this.songCounter == 5) {
+      this.songCounter = 0;
     }
 
-    
+
     this.audio.src = this.newReleaseSongs[this.songCounter].musicPath
     this.imgSrc = this.newReleaseSongs[this.songCounter].thumbnailPath
     this.songName = this.newReleaseSongs[this.songCounter].musicName
@@ -125,11 +125,10 @@ export class MainDashboardPageComponent implements OnInit {
   backwardPlay() {
     this.songCounter--;
 
-    if(this.songCounter==-1){
-      this.songCounter=4;
+    if (this.songCounter == -1) {
+      this.songCounter = 4;
     }
 
-    
     this.audio.src = this.newReleaseSongs[this.songCounter].musicPath
     this.imgSrc = this.newReleaseSongs[this.songCounter].thumbnailPath
     this.songName = this.newReleaseSongs[this.songCounter].musicName

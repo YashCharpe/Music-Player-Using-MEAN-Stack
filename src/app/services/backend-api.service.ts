@@ -15,7 +15,9 @@ export class BackendApiService {
 
   checkEmailAndPassword(emailId:string){
     let url = "http://localhost:9000/users/"+emailId;
+    
     return this.http.get(url)
+    
   }
 
   getSelectedSong(songId:string){

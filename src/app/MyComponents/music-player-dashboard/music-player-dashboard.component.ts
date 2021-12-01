@@ -106,7 +106,6 @@ export class MusicPlayerDashboardComponent implements OnInit {
 
       this.outputObject = <JSON>this.songObject
       
-
       this.backendApi.postSongPlaylist(this.emailId,this.songId,this.songObject).subscribe(data=>{
         alert("Added to Favourites!")
       })

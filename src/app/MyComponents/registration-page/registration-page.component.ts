@@ -32,6 +32,7 @@ export class RegistrationPageComponent implements OnInit {
       alert("Enter Password")
     }
     else {
+
       this.backendApi.createNewAccount(data).subscribe(data => {
         console.warn(data)
       })
